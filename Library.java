@@ -43,6 +43,7 @@ public class Library {
                     break;
                 case 3:
                     books.showAllBooks();
+                    System.out.println("===============================================");
                     break;
                 case 4:
                     searchBook();
@@ -55,12 +56,15 @@ public class Library {
                     break;
                 case 7:
                     students.listAllStudents();
+                    System.out.println("===============================================");
                     break;
                 case 8:
                     System.out.println("Thank you for using Library Management System!");
+                    System.out.println("===============================================\n\n");
                     break;
                 default:
                     System.out.println("Invalid choice! Please try again.");
+                    System.out.println("===============================================");
             }
         } while (choice != 8);
 
@@ -72,6 +76,7 @@ public class Library {
         Book book = new Book(sc);
         books.addBook(book);
         System.out.println("Book added successfully!");
+        System.out.println("===============================================");
     }
 
     private void registerStudent() {
@@ -85,6 +90,7 @@ public class Library {
         } else {
             System.out.println("Failed to register student. Registration number already exists or list is full.");
         }
+        System.out.println("===============================================");
     }
 
     private void searchBook() {
@@ -104,6 +110,7 @@ public class Library {
             default:
                 System.out.println("Invalid search option!");
         }
+            System.out.println("===============================================");
     }
 
     private void checkoutBook() {
@@ -122,6 +129,7 @@ public class Library {
         } else {
             System.out.println("Book not available or not found.");
         }
+        System.out.println("===============================================");
     }
 
     private void checkinBook() {
@@ -136,6 +144,7 @@ public class Library {
         } else {
             System.out.println("Failed to check in book. Student or book not found.");
         }
+        System.out.println("===============================================");
     }
 
     public static void main(String[] args) {
