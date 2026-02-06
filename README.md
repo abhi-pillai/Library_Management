@@ -70,4 +70,8 @@ Select options from the menu:
 7. List All Students
 8. Exit
 
+## Credits
+This project is part of the **GeeksForGeeks NationSkillUp** program.
+
+
 [↑ Back to top](#library-management-system)
