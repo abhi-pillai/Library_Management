@@ -33,16 +33,26 @@ public class Students {
     }
 
     public void listAllStudents() {
-        System.out.println("\n========== ALL STUDENTS ==========");
         if (studentCount == 0) {
             System.out.println("No students registered yet.");
             return;
         }
+        else{
+               System.out.println("\n========== ALL STUDENTS ==========");
+               System.out.printf("%-5s %-25s %-20s %-15s%n",
+        "No.", "Name", "Registration No", "Books Borrowed");
+
+System.out.println("---------------------------------------------------------------");
         for (int i = 0; i < studentCount; i++) {
-            System.out.println((i + 1) + ". Name: " + students[i].getName() + 
-                ", Registration: " + students[i].getRegistrationNumber() + 
-                ", Books Borrowed: " + students[i].getBookCount());
+            System.out.printf("%-5d %-25s %-20s %-15d%n",
+                (i + 1),
+                students[i].getName(),
+                students[i].getRegistrationNumber(),
+                students[i].getBookCount()
+            );
         }
+        
+    }
     }
 
     public boolean borrowBook(String registrationNumber, String bookTitle) {

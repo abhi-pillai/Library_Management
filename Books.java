@@ -36,29 +36,37 @@ public class Books {
         int sNo = sc.nextInt();
         sc.nextLine(); // consume newline
         
-        System.out.println("S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty");
+        System.out.printf("%-5s %-20s %-20s %-15s %-10s%n",
+        "S.No", "Name", "Author", "Available Qty", "Total Qty");
+        System.out.println("---------------------------------------------------------------");
         for (int i = 0; i < count; i++) {
             if (sNo == theBooks[i].getSerialNumber()) {
-                System.out.println(theBooks[i].getSerialNumber() + "\t\t" + 
-                    theBooks[i].getBookName() + "\t\t" + 
-                    theBooks[i].getAuthorName() + "\t\t" + 
-                    theBooks[i].getAvailableQuantity() + "\t\t\t" + 
-                    theBooks[i].getTotalQuantity());
+                System.out.printf("%-5d %-20s %-20s %-15d %-10d%n",
+                    theBooks[i].getSerialNumber(),
+                    theBooks[i].getBookName(),
+                    theBooks[i].getAuthorName(),
+                    theBooks[i].getAvailableQuantity(),
+                    theBooks[i].getTotalQuantity()
+                );
                 return;
             }
         }
-        System.out.println("No Book for Serial No " + sNo + " Found.");
+            System.out.println("No Book for Serial No " + sNo + " Found.");
     }
 
     public void showAllBooks() {
         System.out.println("\t\t\t\tSHOWING ALL BOOKS\n");
-        System.out.println("S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty");
+        System.out.printf("%-5s %-20s %-20s %-15s %-10s%n",
+        "S.No", "Name", "Author", "Available Qty", "Total Qty");
+        System.out.println("---------------------------------------------------------------");
         for (int i = 0; i < count; i++) {
-            System.out.println(theBooks[i].getSerialNumber() + "\t\t" + 
-                theBooks[i].getBookName() + "\t\t" + 
-                theBooks[i].getAuthorName() + "\t\t" + 
-                theBooks[i].getAvailableQuantity() + "\t\t\t" + 
-                theBooks[i].getTotalQuantity());
+            System.out.printf("%-5d %-20s %-20s %-15d %-10d%n",
+                theBooks[i].getSerialNumber(),
+                theBooks[i].getBookName(),
+                theBooks[i].getAuthorName(),
+                theBooks[i].getAvailableQuantity(),
+                theBooks[i].getTotalQuantity()
+            );
         }
     }
 
@@ -90,14 +98,18 @@ public class Books {
         System.out.print("Enter Book Name: ");
         String name = sc.nextLine();
         
-        System.out.println("S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty");
+        System.out.printf("%-5s %-20s %-20s %-15s %-10s%n",
+        "S.No", "Name", "Author", "Available Qty", "Total Qty");
+        System.out.println("---------------------------------------------------------------");
         for (int i = 0; i < count; i++) {
             if (name.equalsIgnoreCase(theBooks[i].getBookName())) {
-                System.out.println(theBooks[i].getSerialNumber() + "\t\t" + 
-                    theBooks[i].getBookName() + "\t\t" + 
-                    theBooks[i].getAuthorName() + "\t\t" + 
-                    theBooks[i].getAvailableQuantity() + "\t\t\t" + 
-                    theBooks[i].getTotalQuantity());
+                System.out.printf("%-5d %-20s %-20s %-15d %-10d%n",
+                    theBooks[i].getSerialNumber(),
+                    theBooks[i].getBookName(),
+                    theBooks[i].getAuthorName(),
+                    theBooks[i].getAvailableQuantity(),
+                    theBooks[i].getTotalQuantity()
+                    );
                 return;
             }
         }
